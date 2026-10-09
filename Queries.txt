@@ -1,0 +1,42 @@
+
+?- consult('cars.pl').
+
+?- can_buy(100000, red).
+With 80000 you can purchase the car datsun
+true ;
+false.
+
+?- can_buy(100000, blue).
+With 80000 you can purchase the truck ford
+true ;
+false.
+
+?- can_buy(100000, green).
+false.
+
+?- can_buy(150000, red).
+With 130000 you can purchase the car chrysler
+true ;
+With 80000 you can purchase the car datsun
+true ;
+false.
+
+?- can_buy(80000, red).
+false.
+
+?- can_buy(80000, blue).
+false.
+
+?- can_buy(100000).
+With 90000 you can purchase the car ford
+true ;
+With 80000 you can purchase the car datsun
+true ;
+With 80000 you can purchase the truck ford
+true ;
+With 50000 you can purchase the truck datsun
+true ;
+With 25000 you can purchase the truck toyota
+true ;
+false.
+
